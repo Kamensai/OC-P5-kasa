@@ -1,0 +1,17 @@
+@use '../variables.scss';
+
+header {
+  @include variables.flex-between-center;
+  @include variables.max1440-center;
+  height: 68px;
+  padding-top: 50px;
+  nav {
+    @include variables.flex-between-center;
+    gap: 57px;
+    a {
+      @include variables.size-24-500;
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}

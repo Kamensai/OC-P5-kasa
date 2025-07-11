@@ -1,0 +1,25 @@
+$max-width-desktop: 1440px;
+
+$main-font: 'Montserrat', sans-serif;
+
+/*colors*/
+$main-color: #ff6060;
+$secondary-color: #f6f6f6;
+
+@mixin flex-between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin max1440-center {
+  width: 100%;
+  max-width: $max-width-desktop;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+@mixin size-24-500 {
+  font-size: 24px;
+  font-weight: 500;
+}

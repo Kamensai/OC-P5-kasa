@@ -1,0 +1,32 @@
+@use '../variables.scss';
+
+.card-content {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); // opacité à ajuster selon besoin
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  h3 {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    @include variables.size-24-500;
+    color: #fff;
+    z-index: 2;
+  }
+}
