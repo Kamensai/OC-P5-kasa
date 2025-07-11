@@ -1,0 +1,59 @@
+@use '../variables.scss';
+
+.collapse {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+
+  .collapse-title {
+    background-color: variables.$main-color;
+    border-radius: 10px;
+    display: flex;
+    padding: 0 20px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    font-weight: 500;
+    font-size: 18px;
+    height: 52px;
+    box-sizing: border-box;
+
+    .collapse-title-text {
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .collapse-toggle {
+      color: white;
+    }
+  }
+
+  .collapse-content {
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    z-index: -1;
+    max-height: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    &.open {
+      max-height: 1000px;
+      transform: scaleY(1);
+      opacity: 1;
+      padding: 1rem;
+    }
+  }
+}

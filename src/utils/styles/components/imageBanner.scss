@@ -22,12 +22,15 @@
     z-index: 0;
   }
   h2 {
+    font-size: 48px;
+    font-weight: 700;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    margin: 0;
+    white-space: nowrap;
     z-index: 2;
-    @include variables.size-24-500;
     color: #fff;
   }
 }
