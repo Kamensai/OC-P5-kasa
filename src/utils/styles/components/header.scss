@@ -3,7 +3,6 @@
 header {
   @include variables.flex-between-center;
   @include variables.max1440-center;
-  height: 68px;
   padding-top: 50px;
   nav {
     @include variables.flex-between-center;

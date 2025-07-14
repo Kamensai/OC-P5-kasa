@@ -1,6 +1,7 @@
 /*pages*/
 @use './pages/home.scss';
 @use './pages/about.scss';
+@use './pages/error.scss';
 
 /*components*/
 @use './components/header.scss';
@@ -19,6 +20,7 @@ body {
     font-family: variables.$main-font;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     min-height: 100vh;
     align-items: center;
