@@ -1,0 +1,59 @@
+@use '../variables';
+
+.logement-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: variables.$max-width-desktop;
+  height: 415px;
+  overflow: hidden;
+  color: white;
+  border-radius: 25px;
+
+  img {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .index {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 500;
+    z-index: 2;
+  }
+
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+    box-sizing: border-box;
+
+    .chevron-left,
+    .chevron-right {
+      width: 47px;
+      height: 79px;
+      font-size: 24px;
+      cursor: pointer;
+      z-index: 2;
+      background: none;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: auto;
+    }
+  }
+}

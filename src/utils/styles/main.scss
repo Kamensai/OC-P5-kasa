@@ -2,6 +2,7 @@
 @use './pages/home.scss';
 @use './pages/about.scss';
 @use './pages/error.scss';
+@use './pages/logement.scss';
 
 /*components*/
 @use './components/header.scss';
@@ -9,6 +10,7 @@
 @use './components/imageBanner.scss';
 @use './components/card.scss';
 @use './components/collapse.scss';
+@use './components/slideshow.scss';
 
 @use './variables.scss';
 
@@ -25,5 +27,9 @@ body {
     min-height: 100vh;
     align-items: center;
     gap: 50px;
+
+    .hidden {
+      display: none;
+    }
   }
 }

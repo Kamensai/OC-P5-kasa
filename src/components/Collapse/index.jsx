@@ -14,10 +14,7 @@ function Collapse({ collapseTitle, collapseContent }) {
             icon={faChevronUp}
             size="xl"
             onClick={() => setIsOpen(!isOpen)}
-            style={{
-              transform: isOpen ? 'rotate(-180deg)' : 'rotate(0deg)',
-              transition: 'transform 0.3s',
-            }}
+            className={isOpen ? 'chevron chevron-open' : 'chevron'}
           />
         </div>
       </div>

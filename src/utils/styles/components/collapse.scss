@@ -30,6 +30,14 @@
     .collapse-toggle {
       color: white;
     }
+
+    .chevron {
+      color: white;
+      transition: transform 0.3s ease;
+      &.chevron-open {
+        transform: rotate(180deg);
+      }
+    }
   }
 
   .collapse-content {
