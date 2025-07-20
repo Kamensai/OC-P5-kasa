@@ -1,4 +1,6 @@
-import { useParams } from 'react-router'
+import { useParams, useNavigate } from 'react-router'
+import { useEffect } from 'react'
+
 import Collapse from '../../components/Collapse'
 import Slideshow from '../../components/Slideshow'
 
@@ -8,10 +10,21 @@ import starInactive from '../../assets/star-inactive.png'
 
 function Logement() {
   const { id } = useParams()
+  const navigate = useNavigate()
   const logement = logements.find((logement) => logement.id === id)
 
   const description = logement ? logement.description : ''
   const equipements = logement ? logement.equipments : []
+
+  useEffect(() => {
+    if (!logement) {
+      navigate(`/Error`)
+    }
+  }, [logement, navigate])
+
+  if (!logement) {
+    return null
+  }
 
   const [firstName, lastName] = logement.host.name.split(' ')
 

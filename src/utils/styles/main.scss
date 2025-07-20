@@ -31,5 +31,13 @@ body {
     .hidden {
       display: none;
     }
+
+    @media (max-width: 768px) {
+      gap: 27px;
+    }
+  }
+
+  .nav-link.active {
+    text-decoration: underline;
   }
 }

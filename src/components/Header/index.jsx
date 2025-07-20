@@ -1,14 +1,18 @@
-import { Link } from 'react-router'
+import { NavLink } from 'react-router'
 import LOGO_desktop from '../../assets/LOGO_desktop.png'
 function Header() {
   return (
     <header>
-      <Link to="/">
+      <NavLink to="/">
         <img src={LOGO_desktop} alt="Logo Kasa" />
-      </Link>
+      </NavLink>
       <nav>
-        <Link to="/">Accueil</Link>
-        <Link to="/about">A Propos</Link>
+        <NavLink to="/" end className="nav-link">
+          Accueil
+        </NavLink>
+        <NavLink to="/about" className="nav-link">
+          A Propos
+        </NavLink>
       </nav>
     </header>
   )

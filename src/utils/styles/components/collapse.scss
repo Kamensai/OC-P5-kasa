@@ -21,10 +21,18 @@
     height: 52px;
     box-sizing: border-box;
 
+    @media (max-width: 768px) {
+      height: 30px;
+    }
+
     .collapse-title-text {
       color: white;
       font-size: 18px;
       font-weight: 700;
+
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
     }
 
     .collapse-toggle {
@@ -36,6 +44,10 @@
       transition: transform 0.3s ease;
       &.chevron-open {
         transform: rotate(180deg);
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
       }
     }
   }

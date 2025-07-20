@@ -7,7 +7,14 @@
   @include variables.max1440-center;
   gap: 30px;
 
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
+
   .collapse {
     padding: 0 108.5px;
+    @media (max-width: 1024px) {
+      padding: 0 19px;
+    }
   }
 }

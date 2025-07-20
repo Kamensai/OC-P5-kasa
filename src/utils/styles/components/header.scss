@@ -4,13 +4,32 @@ header {
   @include variables.flex-between-center;
   @include variables.max1440-center;
   padding-top: 45px;
+
+  img {
+    width: 100px;
+  }
+
   nav {
     @include variables.flex-between-center;
     gap: 57px;
     a {
+      width: 100%;
       @include variables.size-24-500;
       text-decoration: none;
       color: #000;
+      white-space: nowrap;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 13px;
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 20px 0 20px;
   }
 }
