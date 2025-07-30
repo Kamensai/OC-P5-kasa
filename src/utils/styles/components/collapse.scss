@@ -9,13 +9,11 @@
   flex-direction: column;
 
   .collapse-title {
+    @include variables.flex-between-center;
     background-color: variables.$main-color;
     border-radius: 10px;
-    display: flex;
     padding: 0 20px;
-    justify-content: space-between;
     width: 100%;
-    align-items: center;
     font-weight: 500;
     font-size: 18px;
     height: 52px;
@@ -26,7 +24,7 @@
     }
 
     .collapse-title-text {
-      color: white;
+      color: variables.$secondary-font-color;
       font-size: 18px;
       font-weight: 700;
 
@@ -36,11 +34,11 @@
     }
 
     .collapse-toggle {
-      color: white;
+      color: variables.$secondary-font-color;
     }
 
     .chevron {
-      color: white;
+      color: variables.$secondary-font-color;
       transition: transform 0.3s ease;
       &.chevron-open {
         transform: rotate(180deg);
@@ -55,7 +53,7 @@
   .collapse-content {
     font-size: 18px;
     font-weight: 400;
-    color: black;
+    color: variables.$tertiary-font-color;
     font-size: 16px;
     line-height: 24px;
     font-weight: 400;

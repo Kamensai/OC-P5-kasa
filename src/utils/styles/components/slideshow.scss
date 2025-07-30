@@ -6,7 +6,7 @@
   max-width: variables.$max-width-desktop;
   height: 415px;
   overflow: hidden;
-  color: white;
+  color: variables.$secondary-font-color;
   border-radius: 25px;
 
   @media (max-width: 768px) {
@@ -41,20 +41,19 @@
   }
 
   .nav {
+    @include variables.flex-between-center;
     position: absolute;
     top: 0;
     left: 0;
     padding: 0 25px;
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     pointer-events: none;
     box-sizing: border-box;
 
     .chevron-left,
     .chevron-right {
+      @include variables.flex-center;
       width: 47px;
       height: 79px;
       font-size: 24px;
@@ -62,9 +61,6 @@
       z-index: 2;
       background: none;
       border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       pointer-events: auto;
 
       @media (max-width: 768px) {

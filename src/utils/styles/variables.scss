@@ -1,10 +1,16 @@
 $max-width-desktop: 1440px;
 
+/*fonts*/
 $main-font: 'Montserrat', sans-serif;
 
 /*colors*/
 $main-color: #ff6060;
 $secondary-color: #f6f6f6;
+
+/*fonts colors*/
+$primary-font-color: #ff6060;
+$secondary-font-color: #fff;
+$tertiary-font-color: #000;
 
 @mixin flex-between-center {
   display: flex;
@@ -12,7 +18,24 @@ $secondary-color: #f6f6f6;
   align-items: center;
 }
 
-@mixin max1440-center {
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin rounded($radius: 25px) {
+  border-radius: $radius;
+}
+
+@mixin max-width-center {
   width: 100%;
   max-width: $max-width-desktop;
   padding: 0 100px;

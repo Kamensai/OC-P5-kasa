@@ -5,7 +5,7 @@
   margin: 0 auto;
   height: 223px;
   width: 100%;
-  border-radius: 25px;
+  @include variables.rounded;
   overflow: hidden;
 
   &::after {
@@ -37,7 +37,7 @@
     margin: 0;
     text-align: center;
     z-index: 2;
-    color: #fff;
+    color: variables.$secondary-font-color;
 
     @media (max-width: 768px) {
       font-size: 24px;

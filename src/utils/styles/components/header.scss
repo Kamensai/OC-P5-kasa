@@ -2,7 +2,7 @@
 
 header {
   @include variables.flex-between-center;
-  @include variables.max1440-center;
+  @include variables.max-width-center;
   padding-top: 45px;
 
   img {
@@ -16,7 +16,7 @@ header {
       width: 100%;
       @include variables.size-24-500;
       text-decoration: none;
-      color: #000;
+      color: variables.$tertiary-font-color;
       white-space: nowrap;
 
       @media (max-width: 768px) {
