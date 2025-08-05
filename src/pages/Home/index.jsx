@@ -13,6 +13,7 @@ function Home() {
         imgBannerAlt="Image de brumes dans les montagnes"
         textBanner={'Chez vous, partout et ailleurs'}
       />
+      {/* Récupération du contenu de datas/logements.json et affichage de la liste des logements sous forme de cartes cliquables qui renvoie vers la page du logement  */}
       <div className="card-wrapper">
         {logements.map((logement) => (
           <Link key={logement.id} to={`/logement/${logement.id}`}>

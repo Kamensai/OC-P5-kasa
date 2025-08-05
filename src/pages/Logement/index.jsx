@@ -9,13 +9,16 @@ import starActive from '../../assets/star-active.png'
 import starInactive from '../../assets/star-inactive.png'
 
 function Logement() {
+  // Récupère l'id du logement depuis l'URL
   const { id } = useParams()
   const navigate = useNavigate()
+  // Recherche le logement correspondant à l'id
   const logement = logements.find((logement) => logement.id === id)
 
   const description = logement ? logement.description : ''
   const equipements = logement ? logement.equipments : []
 
+  // Redirige vers la page d'erreur si le logement n'existe pas
   useEffect(() => {
     if (!logement) {
       navigate(`/Error`)
@@ -26,6 +29,7 @@ function Logement() {
     return null
   }
 
+  // Sépare le nom de l'hôte en prénom et nom
   const [firstName, lastName] = logement.host.name.split(' ')
 
   return (
@@ -36,6 +40,7 @@ function Logement() {
           <div className="logement-content-1-a">
             <h2>{logement.title}</h2>
             <p className="logement-location">{logement.location}</p>
+            {/* Affichage des tags du logement */}
             <div className="logement-tags">
               {logement.tags.map((tag, index) => (
                 <div key={index} className="logement-tag">
@@ -52,6 +57,7 @@ function Logement() {
               </div>
               <img src={logement.host.picture} />
             </div>
+            {/* Affichage de la note du logement. Le nombre de starsActive correspond au rating */}
             <div className="logement-rating">
               {Array.from({ length: 5 }, (_, index) =>
                 index < logement.rating ? (

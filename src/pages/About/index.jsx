@@ -12,6 +12,7 @@ function About() {
         imgBannerAlt="Image de montagnes"
       />
 
+      {/* Liste des valeurs de l'entreprise sous forme de collapses */}
       <Collapse
         collapseTitle="Fiabilité"
         collapseContent="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."
